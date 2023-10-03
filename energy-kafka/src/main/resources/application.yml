@@ -1,0 +1,26 @@
+server:
+  port: 8080
+kafka:
+  topic:
+    name: battery-events-topic
+  bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+  schema:
+    registry:
+      url: http://localhost:8081
+  consumer:
+    group-id: battery-event-web-app
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/energy-events
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update

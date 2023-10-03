@@ -1,0 +1,55 @@
+{
+    "name": "BatteryEventAvro",
+    "namespace": "com.manning.energy.avro.model",
+    "type": "record",
+    "fields": [
+        {
+            "name": "charging_source",
+            "type": "string"
+        },
+        {
+            "name": "device_id",
+            "type": "string"
+        },
+        {
+            "name": "charging",
+            "type": "int"
+        },
+        {
+            "name": "current_capacity",
+            "type": "int"
+        },
+        {
+            "name": "inverter_state",
+            "type": "int"
+        },
+        {
+            "name": "moduleL_temp",
+            "type": "int"
+        },
+        {
+            "name": "moduleR_temp",
+            "type": "int"
+        },
+        {
+            "name": "SoC_regulator",
+            "type": "double"
+        },
+        {
+            "name": "processor1_temp",
+            "type": "int"
+        },
+        {
+            "name": "processor2_temp",
+            "type": "int"
+        },
+        {
+            "name": "processor3_temp",
+            "type": "int"
+        },
+        {
+            "name": "processor4_temp",
+            "type": "int"
+        }
+    ]
+}
